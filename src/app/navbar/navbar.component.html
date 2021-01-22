@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span class="nav-logo"><mat-icon>wb_sunny</mat-icon>Eq.For.Meteo<mat-icon>wb_cloudy</mat-icon></span>
+    <span class="example-spacer"></span>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Cerca</mat-label>
+            <input type="text" placeholder="Scegli la città" aria-label="Number" matInput [formControl]="formControl"
+                [matAutocomplete]="auto">
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
+    <mat-slide-toggle>&nbsp;<mat-icon>gps_off</mat-icon>&nbsp;</mat-slide-toggle>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>

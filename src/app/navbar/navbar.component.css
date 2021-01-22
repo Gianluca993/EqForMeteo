@@ -1,0 +1,22 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+mat-toolbar {
+    height: 12vh;
+    width: 90%;
+    margin: auto;
+}
+
+mat-toolbar form {
+    margin-right: 30px;
+}
+
+mat-toolbar button {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav-logo {
+    font-size: 25px;
+}
